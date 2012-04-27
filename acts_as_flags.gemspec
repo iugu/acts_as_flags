@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = ActsAsFlags::VERSION
   s.authors     = ["alepaez"]
   s.email       = ["alepaezseq@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/iugu/acts_as_flags"
   s.summary     = %q{Make ActiveRecord Attributes to act as flags}
   s.description = %q{Make ActiveRecord Attributes to act as flags}
 
