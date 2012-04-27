@@ -12,11 +12,11 @@ How to use it
 > acts_as_flags :flags, %w[ sent re-sent ]
 
 **Add flag mask to your table**
-> #rails g migration AddFlagsMaskToFoo
+> \#rails g migration AddFlagsMaskToFoo
 >
 > add_column :foos, :flags_mask, :integer
 >
-> #rake db:migrate
+> \#rake db:migrate
 
 Instance Methods
 ----------------
