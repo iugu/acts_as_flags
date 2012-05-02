@@ -10,6 +10,10 @@ module ActsAsFlags
       end
     end
 
+    (class << self; self; end).send(:define_method, "available_#{field}") do
+      flags
+    end
+
     define_method "#{field}=" do |new_flags|
       self.send("#{field}_mask=", (new_flags & flags).map { |r| 2**flags.index(r) }.sum )
     end
