@@ -8,10 +8,10 @@ Installation
 
 How to use it
 ---------------
-**Add it to your model**
+**In your model**
 > acts_as_flags :flags, %w[ sent re_sent ]
 
-**Add flag mask to your table**
+**In your migration**
 > \#rails g migration AddFlagsMaskToFoo
 >
 > add_column :foos, :flags_mask, :integer
@@ -45,6 +45,16 @@ It will create a method for each possible flag
 > Foo.only_re_sent
 >
 > => Return all foos with the flagged re_sent
+
+**Getting the available flags foy your field**
+
+available_\<field\> will give you the available flags for that field
+
+**Ex:**
+
+> Foo.available_flags
+>
+> => ["sent", "re_sent"]
 
 
 
